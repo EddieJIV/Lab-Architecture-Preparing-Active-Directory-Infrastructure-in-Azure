@@ -1,2 +1,2 @@
-# Lab-Architecture-Preparing-Active-Directory-Infrastructure-in-Azure
-The resources and documentation for setting up a Domain Controller and a client machine in Microsoft Azure
+# Lab Architecture: Preparing Active Directory Infrastructure in Azure
+*Step-by-step instructions for configuring a Domain Controller and a client machine in Microsoft Azure*
