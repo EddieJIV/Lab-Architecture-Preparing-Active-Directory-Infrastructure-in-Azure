@@ -1,3 +1,7 @@
+<p align="center">
+<img width="auto" height="auto" alt="AD" src="https://github.com/user-attachments/assets/8997adb8-3e38-4019-9da5-6fadf4bab369" />
+</p>
+
 # Lab Architecture: Preparing Active Directory Infrastructure in Azure
 *Step-by-step instructions for configuring a Domain Controller and a client machine in Microsoft Azure*
 
@@ -12,6 +16,19 @@
   </tr>
 </table>
 
+## Environments and Technologies Used:
+
+- Microsoft Azure (Virtual Machines/Cloud Compute)
+- Remote Desktop Protocol
+- Windows Server
+- Windows 10 
+
+## Lab Prerequisites:
+- PC or Laptop
+- Connection to the Internet
+- Microsoft Azure Subscription
+
+# Installation Steps:
 
 
 <img src="https://i.imgur.com/DJmEXEB.png" height="700" width="700" alt="Placeholder Image"/>
