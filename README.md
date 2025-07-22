@@ -29,8 +29,7 @@
 - Microsoft Azure Subscription
 
 # Installation Steps:
-
-
+<b>*To begin, log on to your Azure account and Navigate to resource groups.*<b/>
 <img src="https://i.imgur.com/DJmEXEB.png" height="700" width="700" alt="Placeholder Image"/>
 
 <img src="https://i.imgur.com/DJmEXEB.png" height="700" width="700" alt="Placeholder Image"/>
