@@ -29,14 +29,87 @@
 - Microsoft Azure Subscription
 
 # Installation Steps:
-<b>*To begin, log on to your Azure account and Navigate to resource groups.*<b/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="700" width="700" alt="Placeholder Image"/>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="700" width="700" alt="Placeholder Image"/>
+<img width="700" height="700" alt="RG Create 1" src="https://github.com/user-attachments/assets/896fb4ef-e804-4128-8d5b-cabf7a46d48a" />
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="700" width="700" alt="Placeholder Image"/>
+- To begin, log on to your Azure account and Navigate to resource groups.
+- Hit Create.
+
+<img width="700" height="700" alt="RG Create 2" src="https://github.com/user-attachments/assets/919e86f4-1721-4553-97fb-2394c58d5ef5" />
+
+- Making sure you're using the proper subscription, we are going to name our Resource Group for this lab & select the region.
+  - Name your Resource Group Active-Directory-Lab
+  - Put your Resource Group in a region local to you, I am going to use East US 2.
+  - Click Review + Create.
+- When prompted, click create one last time.
+
+<img width="700" height="700" alt="RG Create 3" src="https://github.com/user-attachments/assets/562c288a-69df-41c2-a1f5-f86232522055" />
 
 
+- When prompted, click create one last time.
+- Next, we are going to create our Virtual Network.
+
+<img width="700" height="700" alt="Virtual Network Create" src="https://github.com/user-attachments/assets/7c69335e-780b-42d4-9641-67ee3712f7d2" />
+
+- Next, navigate to Virtual Networks, we are going to create our own for this lab.
+- Click Create once you've landed on the Virtual Network home page.
+
+
+<img width="700" height="700" alt="VNet Create" src="https://github.com/user-attachments/assets/980ea549-223f-4863-9563-9655cc186f2b" />
+
+
+- Make sure the new Virtual Network is in the Resource Group we just created, and name the Virtual Network, "Active-Directory-VNet"
+  - make sure that it is in the same region as your resource group.
+- Once you've done so, we dont have to worry about anything else for the VNet so we can just click Review + Create!
+
+<img width="700" height="700" alt="VNet create final" src="https://github.com/user-attachments/assets/a2b7db49-972c-4dc8-92ea-c301d23d63b1" />
+
+- When prompted, click create one last time.
+- Next, we are going to create our Domain Controller Virtual Machine.
+
+<img width="700" height="700" alt="DC1 Create" src="https://github.com/user-attachments/assets/7db8ff67-17a6-4fc1-bcea-1ef9f8a59b02" />
+
+- Navigate to the Virtual Machine section of Azure & click Create.
+
+<img width="700" height="700" alt="DC-1 create 2" src="https://github.com/user-attachments/assets/47d5227d-f91a-4f51-9676-f67e3f7c282b" />
+
+
+- Make sure to select the Resource Group we just created.
+- For our machine's name, make it DC-1
+- Keep using the same region you've been using thus far.
+- Keep everyhting as-is until you get down to image.
+- THIS IS VERY IMPORTANT: Select, "Windows Server 2022 Datacenter: Azure Edition - x64 Gen2" for the image.
+
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/05f6221b-17e1-4424-b90c-5fc9d32c9d73" />
+
+
+- Leave everything alone until you get to the size of the VM, and select "Standard_D2s_v3 - 2 vcpus, 8 GiB memory"
+- For the username of the Administrator account: labuser
+- Password: Cyberlab123!
+- Leave everything else on the page alone until you get to the Licensing and check those boxes.
+- Then we can click Next: Disks >
+- Then, click Next: Networking >
+
+<img width="700" height="700" alt="DC-1 good to go" src="https://github.com/user-attachments/assets/0540d627-027d-4097-9e8d-a51156927ca0" />
+
+- As long as our Active-Directory-VNet is selected, we can go ahead and click Review + Create!
+
+<img width="700" height="700" alt="Review + Create" src="https://github.com/user-attachments/assets/9ed21739-d7b1-44ea-81d9-2a8e4ab1742e" />\
+
+- Make sure your DC-1 Basic details match the image above, specifically focusing on the Resource Group, Region, Image, and Size.
+- If they appear to match, then you are safe to click Create!
+
+
+
+
+
+
+
+
+
+
+
+---
 
 <table>
   <tr>
