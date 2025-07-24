@@ -40,12 +40,12 @@
 - Making sure you're using the proper subscription, we are going to name our Resource Group for this lab & select the region.
   - Name your Resource Group Active-Directory-Lab
   - Put your Resource Group in a region local to you, I am going to use East US 2.
-  - Click Review + Create.
-- When prompted, click create one last time.
+- Click Review + Create.
+
 
 <img width="700" height="700" alt="RG Create 3" src="https://github.com/user-attachments/assets/562c288a-69df-41c2-a1f5-f86232522055" />
 
-
+- Review the properties of the Resource Group, making sure it is in the region you want it to be in. We need to make sure to use the same region as we create this lab's infrastructure.
 - When prompted, click create one last time.
 - Next, we are going to create our Virtual Network.
 
@@ -69,7 +69,7 @@
 
 <img width="700" height="700" alt="DC1 Create" src="https://github.com/user-attachments/assets/7db8ff67-17a6-4fc1-bcea-1ef9f8a59b02" />
 
-- Navigate to the Virtual Machine section of Azure & click Create.
+- Navigate to the Compute infratructure | Virtual machines section of Azure & click Create, then select Virtual Machine.
 
 <img width="700" height="700" alt="DC-1 create 2" src="https://github.com/user-attachments/assets/47d5227d-f91a-4f51-9676-f67e3f7c282b" />
 
@@ -96,8 +96,43 @@
 
 <img width="700" height="700" alt="Review + Create" src="https://github.com/user-attachments/assets/9ed21739-d7b1-44ea-81d9-2a8e4ab1742e" />\
 
-- Make sure your DC-1 Basic details match the image above, specifically focusing on the Resource Group, Region, Image, and Size.
-- If they appear to match, then you are safe to click Create!
+- Make sure your DC-1 Basic details match the image above, specifically focusing on the Resource Group, Region, Image, Size, and Virtual Network.
+- If they appear to match what is seen in the above image (minus the region if you've been using one different from mine) then you are safe to click Create!
+- Once the DC-1 creates, head back to the Compute infrastructure | Virtual machines for the next step.
+
+<img width="700" height="700" alt="Create" src="https://github.com/user-attachments/assets/40119dd5-958f-42e9-a048-ef093db0d981" />
+
+- After taking a moment to notice and apprecite our DC-1 hanging there waiting to be configured, click on create; then select Virtual Machine as we are going to set-up our client machine.
+
+<img width="700" height="700" alt="A.Client-1" src="https://github.com/user-attachments/assets/5124c37b-3507-4d02-a95d-247f984ba0fd" />
+
+- Select our Active Directory Resource Group, and name our new machine, "Client-1".
+- Again, make sure to be consistently using the same region.
+- Leave everything else alone until you get to Image.
+
+<img width="700" height="700" alt="Image & Size" src="https://github.com/user-attachments/assets/eda99a72-bef2-4f59-a35b-e83d9426bc99" />
+
+- For image, we are going to use Windows 10 Pro, version 22H2 - x64 Gen2
+- Scroll down to Size, and select Standard_D2s_v3 - 2 vcpus, 8 GiB memory
+
+<img width="700" height="700" alt="Cyberlabs123!" src="https://github.com/user-attachments/assets/85ee76df-b6cc-4241-9c27-0a5df93edc14" />
+
+- For the username of the Administrator account: labuser
+- Password: Cyberlab123!
+- Leave everything else on the page alone until you get to the Licensing and check the box.
+- Then we can click Next: Disks >
+- Then, click Next: Networking >
+
+<img width="700" height="700" alt="VNET" src="https://github.com/user-attachments/assets/04804b0a-8cd5-4cf7-bf97-0fcc538786d2" />
+
+- As long as our Active-Directory-VNet is selected, we can go ahead and click Review + Create!
+
+<img width="700" height="700" alt="REVIEW" src="https://github.com/user-attachments/assets/8385b0de-f65d-4a3d-9f27-e348fd478118" />
+
+
+
+- Review your Client-1 Basic details and make sure they match the image above. Specifically focusing on the Resource Group, Region, Image, Size, and Virtual Network.
+- If they appear to match what is seen in the above image (minus the region if you've been using one different from mine) as well as your Virtual Network being set to  "Active -Directory-VNet" then you are safe to click Create!
 
 
 
