@@ -199,12 +199,42 @@ Log into the DC-1 VM for the next Step:
 <img width="1000" height="800" alt="Restart Client 1" src="https://github.com/user-attachments/assets/30ae92fe-f1f8-4232-a947-3641fd2a8a5d" />
 
 - Once you've configured the NIC settings within Client-1's DNS server settings, navigate back to the Virtual machine home and restart Client-1 by checking the box to the left of Client-1, then finding where it says "restart" and clicking on that.
+- Once you've restarted the CLient-1 VM proceed to log into Client-1 for the next step.
 
- 
+---
+Once the VM has been sucessfully restarted, use Remote Desktop Connection to proceed to log into Client-1.
+- Once logged in to the Client-1 VM, we are going to attempt to Ping DC-1 in powershell.
+
+<img width="700" height="700" alt="Verify" src="https://github.com/user-attachments/assets/7109d904-278b-4531-ac11-06ddbc214d32" />
+
+- If you want to verify you are on the correct Virtual Machine prior to testing the VM's connectivity, you may open up the settings, type "About" into the sarch bar, and verfiy that the VM is running on Windows 10 Pro. 
+
+<img width="700" height="700" alt="Start PS" src="https://github.com/user-attachments/assets/a287c022-281c-48c1-9280-1f3949f401ab" />
+
+- Now, navigate to and open up Powershell.
 
 
+<table>
+  <tr>
+    <td>
+      <img width="700" height="700" alt="Pre-Run cmd" src="https://github.com/user-attachments/assets/e7806780-d570-4138-a02b-3769086397e0" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="Successful ping" src="https://github.com/user-attachments/assets/788217cb-084d-4e12-8993-e78fbe14dd10" />
+    </td>
+  </tr>
+</table>
 
+- Type in, Ping, followed by the private IP address of DC-1 to test the connection between the two VMs
 
+- If the ping is successful, it means the the network and firewall settings are correctly configured and basic network communication needed for domain services is working.
+ - The image on the right is what a sucessful ping looks like in this instance.
+- If the ping command fails at this point, it means Client 1 cannot communicate with DC-1 over the network. Likely reasons include:
+  - DC-1’s Windows Firewall is still enabled and blocking ping requests.
+  - Client 1 and DC-1 are in different virtual networks or subnets.
+  - The network interface or DNS settings are incorrect.
+  - DC-1 is not running or not reachable.
+- This must be fixed for domain joining and other domain controller functions to work.
  
 
 
@@ -222,16 +252,6 @@ Log into the DC-1 VM for the next Step:
 
 ---
 
-<table>
-  <tr>
-    <td>
-      <img width="1000" alt="Img1" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-    <td>
-      <img width="1000" alt="Img2" src="https://i.imgur.com/DJmEXEB.png" />
-    </td>
-  </tr>
-</table>
 
 
 <table>
