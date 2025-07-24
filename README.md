@@ -132,7 +132,29 @@
 
 
 - Review your Client-1 Basic details and make sure they match the image above. Specifically focusing on the Resource Group, Region, Image, Size, and Virtual Network.
-- If they appear to match what is seen in the above image (minus the region if you've been using one different from mine) as well as your Virtual Network being set to  "Active -Directory-VNet" then you are safe to click Create!
+- If they appear to match what is seen in the above image (minus the region if you've been using one different from mine) as well as your Virtual Network being set to "Active -Directory-VNet" then you are safe to click Create!
+---
+- Now that out VM's are set-up we need to do some internal configuration for the intents and purposes of this lab:
+
+*We need to set the domain controller’s (DC) private IP to static so it never changes. This is important because the client computer uses the DC’s IP address as its DNS server in order to join the domain. If the DC’s IP address changed (because it was set to dynamic), the client would no longer be able to find the domain controller or resolve domain names, and domain services would break. Setting it to static ensures the DC is always reachable at the same IP address.*
+
+<img width="700" height="700" alt="DC-1 Homepage" src="https://github.com/user-attachments/assets/12056a4d-10c1-420f-a88d-be81b44b2acf" />
+
+- In order to do so, naviage to DC-1's home page in Compute infrastructure | Virtual machines.
+- Click on the Networking drop-down and select network settings.
+
+<img width="700" height="700" alt="NIC" src="https://github.com/user-attachments/assets/aaf2f228-d40e-4152-a478-094532d271e7" />
+
+- Once inside DC-1's Network settings, click on the Network Interface Card's hyperlink. We are going to configure the Network interface card (NIC) to prevent the private IP address from changing.
+
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/04e9dae7-9315-48fe-b7ab-6d793a8fe3bf" />
+
+- First, click on ipconfig1 (the sidebar on the right will appear)
+- Then, change the Private IP address settings to Static.
+- Click Save.
+
+
+  
 
 
 
