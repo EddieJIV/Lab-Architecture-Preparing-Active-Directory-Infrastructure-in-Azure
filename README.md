@@ -134,7 +134,7 @@
 - Review your Client-1 Basic details and make sure they match the image above. Specifically focusing on the Resource Group, Region, Image, Size, and Virtual Network.
 - If they appear to match what is seen in the above image (minus the region if you've been using one different from mine) as well as your Virtual Network being set to "Active -Directory-VNet" then you are safe to click Create!
 ---
-- Now that out VM's are set-up we need to do some internal configuration for the intents and purposes of this lab:
+Now that our VMs are set-up we need to do some internal configuration for the intents and purposes of this lab:
 
 *We need to set the domain controller’s (DC) private IP to static so it never changes. This is important because the client computer uses the DC’s IP address as its DNS server in order to join the domain. If the DC’s IP address changed (because it was set to dynamic), the client would no longer be able to find the domain controller or resolve domain names, and domain services would break. Setting it to static ensures the DC is always reachable at the same IP address.*
 
@@ -153,8 +153,22 @@
 - Then, change the Private IP address settings to Static.
 - Click Save.
 
+---
+Log into the DC-1 VM for the next Step:
 
+<img width="700" height="700" alt="About" src="https://github.com/user-attachments/assets/0485c5ac-ba50-4caf-9d1f-36ea8806c53f" />
+
+- Once you're logged into your DC-1 VM, if you want to verify you are in the correct machine, you can type in about on the search bar or navigate to settings and search, "About" and if the Windows specifications show the edition to be the Windows Server 2022 Datacenter Azure Edition then you are good to go!
   
+<img width="700" height="700" alt="RUN" src="https://github.com/user-attachments/assets/7bbb17de-fd51-4246-a323-a1b0515ffec9" />
+
+- First, open up the Run command line and type in logged into the DC-1 VM, open up the run command and type in, "wf.msc"
+  - You can open up the Run app by searching, "Run" in the search bar or by right clicking the windows start icon and finding the "Run" option.
+
+ 
+
+
+
 
 
 
