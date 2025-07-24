@@ -156,6 +156,8 @@ Now that our VMs are set-up we need to do some internal configuration for the in
 ---
 Log into the DC-1 VM for the next Step:
 
+*Please note that disabling the Windows Firewall is not recommended in a real-world environment, as it exposes the system to potential security risks. However, for the purpose of this lab, we are temporarily turning it off to simplify network connectivity and avoid troubleshooting firewall issues, so we can focus on learning Active Directory concepts. Thanks for your understandiong!* 
+
 <img width="700" height="700" alt="About" src="https://github.com/user-attachments/assets/0485c5ac-ba50-4caf-9d1f-36ea8806c53f" />
 
 - Once you're logged into your DC-1 VM, if you want to verify you are in the correct machine, you can type in about on the search bar or navigate to settings and search, "About" and if the Windows specifications show the edition to be the Windows Server 2022 Datacenter Azure Edition then you are good to go!
@@ -164,6 +166,44 @@ Log into the DC-1 VM for the next Step:
 
 - First, open up the Run command line and type in logged into the DC-1 VM, open up the run command and type in, "wf.msc"
   - You can open up the Run app by searching, "Run" in the search bar or by right clicking the windows start icon and finding the "Run" option.
+
+<img width="700" height="700" alt="Firewall Properties" src="https://github.com/user-attachments/assets/f975819e-d778-4100-ad9b-e2378d2b54cd" />
+
+- Click on, "Windows Defender Firewall Properties" to be brought to the next step.
+
+<img width="auto" height="auto" alt="TURNEMOFF" src="https://github.com/user-attachments/assets/ad4c0182-079b-4758-83ad-ade5e845e56f" />
+
+- Turn the Firewall off for the Domain Profile, the Private Profile, and the Public Profile.
+- To do so, change the firewall state from on to off in each of the profile tabs, as seen above.
+- Once you have done so, click on Apply, then on OK.
+
+<img width="700" height="700" alt="No Firewallz" src="https://github.com/user-attachments/assets/27a3fda8-54d9-4a10-8383-cec32d7e4495" />
+
+- Your overview should now look like this subsequent to the prior step.
+
+<img width="700" height="700" alt="Get dc1 private IP" src="https://github.com/user-attachments/assets/1461c03f-d8c6-4421-9162-6c04a78ae53f" />
+
+- Prior to the next step we need to head back over into Azure, and obtain DC-1's private IP address. So we can set Client 1's DNS settings to DC-1's private IP address.
+
+<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/0223a044-d157-4d98-98c9-f8c950f067ad" />
+
+- Naviage to Client 1's Network Settings.
+- Click on Client 1's Virtual Network Interface Card.
+
+<img width="700" height="700" alt="C1 NIC" src="https://github.com/user-attachments/assets/8cf7334b-41a8-499e-9627-c98e8fd93398" />
+
+- Navigate to DNS Server settings.
+- Change, "Inherit from Virtual Network" to "Custom" and enter whatever your DC-1's private IP address is.
+- Click save.
+
+<img width="1000" height="800" alt="Restart Client 1" src="https://github.com/user-attachments/assets/30ae92fe-f1f8-4232-a947-3641fd2a8a5d" />
+
+- Once you've configured the NIC settings within Client-1's DNS server settings, navigate back to the Virtual machine home and restart Client-1 by checking the box to the left of Client-1, then finding where it says "restart" and clicking on that.
+
+ 
+
+
+
 
  
 
