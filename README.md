@@ -248,9 +248,16 @@ Once the VM has been sucessfully restarted, use Remote Desktop Connection to pro
 </table>
 
 
-
 - Next, we are going to run "ipconfig /all"
   - The output for the DNS settings should show DC-1's private IP address.
+ 
+- If the "ipconfig /all" command successfully displays DC-1's private IP address in Client-1's DNS settings, it indicates that Client-1 is correctly configured to use DC-1 as its DNS server. It confirms that the network settings are correctly applied and that the two VMs can interact as intended within the Azure environment.
+
+---
+
+This concludes our preparation of the Active Directory infrastructure thus concluding our lab! In this lab, we successfully established a foundational Active Directory infrastructure by deploying a Windows Server 2022 Domain Controller and a Windows 10 client within Microsoft Azure. We meticulously configured the network settings, ensuring that the Domain Controller's static IP was set correctly, and verified connectivity through successful ping tests and DNS configuration checks.
+
+In the upcoming lab, we will dive deeper into deploying Active Directory services, and continue to build on our skills and knowledge! Hope to see you there.
 
  
 
