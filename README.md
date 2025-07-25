@@ -64,7 +64,8 @@
 
 <img width="700" height="700" alt="VNet create final" src="https://github.com/user-attachments/assets/a2b7db49-972c-4dc8-92ea-c301d23d63b1" />
 
-- When prompted, click create one last time.
+- Again, double check to make sure you've put the Vnet in our newly created Resource Group, and verify it is in the same region as the Resource group.
+- Once you've done so, click create one last time.
 - Next, we are going to create our Domain Controller Virtual Machine.
 
 <img width="700" height="700" alt="DC1 Create" src="https://github.com/user-attachments/assets/7db8ff67-17a6-4fc1-bcea-1ef9f8a59b02" />
@@ -217,10 +218,10 @@ Once the VM has been sucessfully restarted, use Remote Desktop Connection to pro
 <table>
   <tr>
     <td>
-      <img width="700" height="700" alt="Pre-Run cmd" src="https://github.com/user-attachments/assets/e7806780-d570-4138-a02b-3769086397e0" />
+      <img width="700" height="700" alt="Pre-Run cmd" src="https://github.com/user-attachments/assets/e7806780-d570-4138-a02b-3769086397e0" /> Ping DC-1 Private IP
     </td>
     <td>
-      <img width="700" height="700" alt="Successful ping" src="https://github.com/user-attachments/assets/788217cb-084d-4e12-8993-e78fbe14dd10" />
+      <img width="700" height="700" alt="Successful ping" src="https://github.com/user-attachments/assets/788217cb-084d-4e12-8993-e78fbe14dd10" /> Sucessful Ping
     </td>
   </tr>
 </table>
@@ -228,14 +229,31 @@ Once the VM has been sucessfully restarted, use Remote Desktop Connection to pro
 - Type in, Ping, followed by the private IP address of DC-1 to test the connection between the two VMs
 
 - If the ping is successful, it means the the network and firewall settings are correctly configured and basic network communication needed for domain services is working.
- - The image on the right is what a sucessful ping looks like in this instance.
 - If the ping command fails at this point, it means Client 1 cannot communicate with DC-1 over the network. Likely reasons include:
   - DC-1’s Windows Firewall is still enabled and blocking ping requests.
   - Client 1 and DC-1 are in different virtual networks or subnets.
   - The network interface or DNS settings are incorrect.
   - DC-1 is not running or not reachable.
 - This must be fixed for domain joining and other domain controller functions to work.
+
+<table>
+  <tr>
+    <td>
+      <img width="700" height="700" alt="ipconfig /all" src="https://github.com/user-attachments/assets/5cfe383e-6062-404a-9380-3acd0190ee82" />
+    </td>
+    <td>
+      <img width="700" height="700" alt="DNS" src="https://github.com/user-attachments/assets/b723323c-adad-4a00-83de-8cbbc1b9b317" />
+    </td>
+  </tr>
+</table>
+
+
+
+- Next, we are going to run "ipconfig /all"
+  - The output for the DNS settings should show DC-1's private IP address.
+
  
+
 
 
 
