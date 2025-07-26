@@ -38,7 +38,7 @@
 <img width="700" height="700" alt="RG Create 2" src="https://github.com/user-attachments/assets/919e86f4-1721-4553-97fb-2394c58d5ef5" />
 
 - Making sure you're using the proper subscription, we are going to name our Resource Group for this lab & select the region.
-  - Name your Resource Group Active-Directory-Lab
+  - Name your Resource Group, "Active-Directory-Lab"
   - Put your Resource Group in a region local to you, I am going to use East US 2.
 - Click Review + Create.
 
@@ -51,7 +51,7 @@
 
 <img width="700" height="700" alt="Virtual Network Create" src="https://github.com/user-attachments/assets/7c69335e-780b-42d4-9641-67ee3712f7d2" />
 
-- Next, navigate to Virtual Networks, we are going to create our own for this lab.
+- Navigate to Virtual Networks, as we are going to create our own for this lab.
 - Click Create once you've landed on the Virtual Network home page.
 
 
@@ -78,13 +78,13 @@
 - Make sure to select the Resource Group we just created.
 - For our machine's name, make it DC-1
 - Keep using the same region you've been using thus far.
-- Keep everyhting as-is until you get down to image.
+- Keep everyhting following region as-is until you get down to image.
 - THIS IS VERY IMPORTANT: Select, "Windows Server 2022 Datacenter: Azure Edition - x64 Gen2" for the image.
 
 <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/05f6221b-17e1-4424-b90c-5fc9d32c9d73" />
 
 
-- Leave everything alone until you get to the size of the VM, and select "Standard_D2s_v3 - 2 vcpus, 8 GiB memory"
+- Leave everything following after alone until you get to the size of the VM, and select "Standard_D2s_v3 - 2 vcpus, 8 GiB memory"
 - For the username of the Administrator account: labuser
 - Password: Cyberlab123!
 - Leave everything else on the page alone until you get to the Licensing and check those boxes.
