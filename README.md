@@ -259,4 +259,4 @@ This concludes our preparation of the Active Directory infrastructure, thus conc
 
 In the upcoming lab, we will dive deeper into deploying Active Directory services and continue to build on our skills and knowledge! Hope to see you there.
 
-**Reminder:** When you are finished with this lab, be sure to pause your virtual machines in Azure to avoid unnecessary costs. We will continue to use DC-1 and Client-1 in the next lab, so do not delete them. Just stop them until you’re ready to continue on to the next lab! 
+**Reminder:** When you are finished with this lab, be sure to pause your virtual machines in Azure to avoid unnecessary costs. We will continue to use DC-1 and Client-1 in the next lab, so do not delete them. Just stop them until you’re ready to continue on to the next lab! You only pay for compute while VMs are running. Storage (the OS disks) remains, but the cost is minimal compared to leaving VMs powered on. You can safely resume your VMs when you’re ready to continue. 
